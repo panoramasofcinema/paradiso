@@ -1,0 +1,179 @@
+html {
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+	background: black;
+
+  font-family: "Shadows Into Light", "Papyrus", "Amatic SC", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: .0em;
+  color: rgba(172, 255, 47, .75);
+  font-size: 33px;
+}
+ul {
+  list-style-type: none;
+}
+span {
+  cursor: pointer;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+
+
+/* MOVIE */
+#myVideo {
+  position: absolute;
+  left: 0;
+  top: 0;
+	height: 100%;
+	width: 100%;
+  object-fit: contain;
+}
+
+
+
+/* LIST */
+/* */
+#scroll-container {
+  overflow: hidden;
+ 	margin: 0px;
+	height: 85vh;
+	mask: url(#masking);
+  -webkit-mask-image:
+    -webkit-gradient(linear, left bottom, left top, color-stop(.7, black), color-stop(1, transparent));
+}
+
+/* */
+.wrap-container {
+  position: relative;
+  max-height: 100%;
+  width: 100%;
+  margin: auto;
+  overflow: auto;
+  padding-right: 0px;
+  height: 100%;
+  mask: url(#masking);
+  -webkit-mask-image:
+    -webkit-gradient(linear, left top, left bottom, color-stop(.7, black), color-stop(1, transparent));
+}
+
+.wrap-container ul {
+  list-style: none;
+  position: relative;
+  transition: all .3s;
+  top: 0px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.wrap-container ul li {
+  height: 140px;
+  line-height: 100px;
+}
+
+.wrap-container ul li .item{
+  position: relative;
+  display: inline-block;
+  transition: all .4s; /* to schrink and load page */
+}
+
+.wrap-container ul li.active .item { 
+	transform: scale(2.5);
+  letter-spacing: .11em;
+  color: rgba(172, 255, 47, 1);
+}
+.wrap-container ul li span:hover{
+  cursor: pointer;
+	transform: scale(2.5);
+  letter-spacing: .11em;
+  transition: all .4s;
+  color: rgba(172, 255, 47, 1);
+}
+
+.wrap-container ul li:last-of-type {
+  padding-bottom: 150px;
+}
+.wrap-container ul li:first-of-type {
+  padding-top: 150px;
+}
+
+
+
+/* MOVIE LINK */
+#movie_link{
+	position: absolute;
+	z-index: 2;
+	bottom: 40px;
+	right: 40px;
+  color: inherit;
+  font-size: inherit;
+  color: rgba(172, 255, 47, 1);
+}
+
+
+
+/* NAV */
+.navContainerUp {
+	position: absolute;
+  width: 100%;
+	z-index: 2;
+  margin: 0;
+  top: 10px;
+  display: inline-flex;
+}
+.navContainer {
+	position: absolute;
+  width: 100%;
+	z-index: 2;
+  margin: 0;
+  bottom: 10px;
+  display: inline-flex;
+  font-size: 16px;
+  /*opacity: .75;*/
+}
+.navElement {
+  margin: auto;
+}
+
+
+
+/* WELCOME MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  max-height: 100vh;
+  overflow-y: auto;
+  z-index: 2;
+}
+.modal-content {
+  margin-top: 50px;
+}
+.rules {
+  font-size: 20px;
+  letter-spacing: .06em;
+  text-align: center;
+}
+
+
+
+/* ABOUT */
+.about {
+  margin: 50px 50px 0px 50px;
+	/*width: 80%;*/
+  font-size: 30px;
+  letter-spacing: .06em;
+}
+
+.about a {
+  color: tomato;
+}
